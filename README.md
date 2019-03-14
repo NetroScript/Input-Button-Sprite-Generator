@@ -5,21 +5,25 @@ Introduction
 ------------
 
 When playing games it is always nice to be able to remap their key input, especially if you are not using QWERTZ.  
-So developers often give the player the ability to rebind their controls. Often you then have a more or less text window (look f.e. at the source engine remapping) which tells you jump is bound to "space".  
-But imagine you have a tutorial, where you tell the player which key presses lead to what, but they already rebound it, so you get f.e. your input map and tell them "To jump press 'Left Mouse Click'". But in my opinion a visual representation is much nicer than just the text. So for a project I worked on I would have liked to additionally (or only) show images of the input, instead of writing their text form. But to do that you would need those images, and there are some free sprites available for the keyboard and even more which you have to pay for, but still they maybe don't have all keys the players might want to try out. So for the case the player would like to bind something to Ä you probably won't have an image for it. But creating every sprite is a big pain.  
-So I searched for generators which can do the job, where you provide the base structure, but I didn't find anything, so I wrote my own one.  
+So developers often give the player the ability to rebind their controls. Sadly in the most cases you then have a more or less text window (look f.e. at the source engine remapping) which tells you jump is bound to "space".  
+But imagine you have a tutorial, where you tell the player which key press leads to which action, but they already rebound it, so you get your input map and tell them "To jump press 'Left Mouse Click'". But in my opinion a visual representation is much nicer than just the text. For a project I worked on I would have liked to additionally (or only) show images of the input, instead of writing their text form. But to do that you would need to get the sprites from somewhere. There are some free sprites available for the keyboard and even more which you have to pay for, but still they maybe don't have all keys the players might want to try out. So for the case the player would like to bind something to Ä you probably won't have an image for it. But creating every sprite is a big pain.  
+So I searched for generators which can do the job, where you can provide the base structure, but I didn't find anything, so I wrote my [own one](https://netroscript.github.io/Input-Button-Sprite-Generator/).  
 
 Screenshots
 ------------------
 
 The following examples are the base settings.
 
+Generated keyboardkeys:
 ![Generated keyboardkeys](https://i.imgur.com/eQs5HW9.png)
 
+Generated mouse previews:
 ![Generated mouse previews](https://i.imgur.com/cXLcJHT.png)
 
+Generated mouse previews:
 ![Generated mouse previews in Windows Explorer](https://i.imgur.com/cfTQ59L.png)
 
+The Interface:
 ![The Interface](https://i.imgur.com/luhP1KZ.png)
 
 How it works
@@ -39,6 +43,8 @@ Usage
 
 Just download this as a folder, and open index.html in your browser.  
 If you want to use images in the CSS, you have to host a server, otherwise the browser won't allow to export the images.
+
+Or try it out [yourself](https://netroscript.github.io/Input-Button-Sprite-Generator/)!
 
 Further example styles
 -----------------------
