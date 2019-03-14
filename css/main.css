@@ -96,3 +96,27 @@ section.divider {
     background-color: #383838;
     box-shadow: inset -5px 15px 20px -10px rgba(0, 0, 0, 0.6), inset 5px -15px 20px -10px rgba(0, 0, 0, 0.6);
 }
+
+.github p {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+a,
+a:active,
+a:link,
+a:visited,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: #7dc0cd;
+}
+
+.github p>* {
+    flex: 1;
+}
+
+.github a:first-child {
+    line-height: 32px;
+}
