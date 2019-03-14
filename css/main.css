@@ -120,3 +120,17 @@ a:hover {
 .github a:first-child {
     line-height: 32px;
 }
+
+@media only screen and (max-width: 1000px) {
+    main>section {
+        flex-direction: column;
+    }
+
+    .github p {
+        flex-direction: column;
+    }
+
+    .github p>* {
+        margin-bottom: 15px;
+    }
+}
