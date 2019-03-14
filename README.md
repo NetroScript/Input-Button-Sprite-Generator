@@ -14,16 +14,16 @@ Screenshots
 
 The following examples are the base settings.
 
-Generated keyboardkeys:
+Generated keyboardkeys:  
 ![Generated keyboardkeys](https://i.imgur.com/eQs5HW9.png)
 
-Generated mouse previews:
+Generated mouse previews:  
 ![Generated mouse previews](https://i.imgur.com/cXLcJHT.png)
 
-Generated mouse previews:
+Generated mouse previews:  
 ![Generated mouse previews in Windows Explorer](https://i.imgur.com/cfTQ59L.png)
 
-The Interface:
+The Interface:  
 ![The Interface](https://i.imgur.com/luhP1KZ.png)
 
 How it works
