@@ -97,6 +97,16 @@ section.divider {
     box-shadow: inset -5px 15px 20px -10px rgba(0, 0, 0, 0.6), inset 5px -15px 20px -10px rgba(0, 0, 0, 0.6);
 }
 
+.dictionary-error.visible {
+    visibility: visible;
+}
+
+.dictionary-error {
+    color: #aa2d2d;
+    padding: 10px 5px;
+    visibility: hidden;
+}
+
 .github p {
     display: flex;
     width: 100%;

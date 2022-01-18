@@ -55,6 +55,8 @@ Keyboard:
 
 * White and more minimalistic
 
+![Minimalistic preview](https://i.imgur.com/RFDIT2X.png)
+
 CSS:
 
 ```CSS
@@ -84,6 +86,8 @@ CSS:
 ```
 
 * Using images in the CSS
+
+![images preview](https://i.imgur.com/LgJrEZg.png)
 
 CSS:
 
@@ -142,6 +146,8 @@ HTML:
 Mouse:
 
 * 30x30 Pixel mouse icons:
+
+![30x30 mouse preview](https://i.imgur.com/PjmCGPq.png)
 
 CSS:
 

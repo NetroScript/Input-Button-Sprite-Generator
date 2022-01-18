@@ -244,6 +244,8 @@ let defaultKeyDict = {
     "KEY_YDIAERESIS": "Ÿ"
 }
 
+let keyDict = defaultKeyDict;
+
 let defaultKeyHTML = `<div class="wrapper1">
     <div class="wrapper2">
         <div class="keycontainer">
@@ -297,12 +299,26 @@ keyCustomHTML.innerHTML = defaultKeyHTML
 updateKeyHTML()
 keyCustomStyle.onpaste = updateCustomCSS
 keyCustomStyle.oninput = updateCustomCSS
+keyCustomDict.onpaste = updateKeyDictionary
+keyCustomDict.oninput = updateKeyDictionary
 keyCustomHTML.onpaste = updateKeyHTML
 keyCustomHTML.oninput = updateKeyHTML
 keySubmitButton.onclick = clickKeyImages
 
 function updateKeyHTML(){
     KeyHTMLContainer.innerHTML = keyCustomHTML.value
+}
+
+function updateKeyDictionary() {
+    try {
+        keyDict = JSON.parse(keyCustomDict.value);
+        document.querySelector(".dictionary-error").classList.remove("visible");
+    } catch (e) {
+        let errorString = getSurroundingJSON(e, keyCustomDict.value);
+        document.querySelector(".keyboard .json-error").innerText =
+            e.toString() + ((errorString.length > 0) ? "\nAfter/Around the following string:\n" + errorString : "");
+        document.querySelector(".dictionary-error").classList.add("visible");
+    }
 }
 
 function clickKeyImages(){
@@ -316,8 +332,8 @@ function clickKeyImages(){
 async function generateKeyImages(){
     let Zip = new JSZip();
     document.getElementsByClassName("outKeyImages")[0].innerHTML = "";
-    for(let key in defaultKeyDict){
-        let text = defaultKeyDict[key];
+    for(let key in keyDict){
+        let text = keyDict[key];
         document.querySelector(".keyboard .imagekeyboard .letter").innerHTML = text;
         let canvas = await html2canvas(document.querySelector(".imagekeyboard"), {
             backgroundColor: null,
@@ -348,6 +364,8 @@ let defaultMouseDict = {
     "BUTTON_XBUTTON1": "me1",
     "BUTTON_XBUTTON2": "me2"
 }
+
+let mouseDict = defaultMouseDict;
 
 let defaultMouseHTML = `<div class="lmb">
     <div class="mousecontainer">
@@ -512,12 +530,26 @@ MouseCustomHTML.innerHTML = defaultMouseHTML
 updateMouseHTML()
 MouseCustomStyle.onpaste = updateCustomCSS
 MouseCustomStyle.oninput = updateCustomCSS
+MouseCustomDict.onpaste = updateMouseDictionary
+MouseCustomDict.oninput = updateMouseDictionary
 MouseCustomHTML.onpaste = updateMouseHTML
 MouseCustomHTML.oninput = updateMouseHTML
 MouseSubmitButton.onclick = clickMouseImages
 
 function updateMouseHTML() {
     MouseHTMLContainer.innerHTML = MouseCustomHTML.value
+}
+
+function updateMouseDictionary() {
+    try {
+        mouseDict = JSON.parse(MouseCustomDict.value);
+        document.querySelector(".mouse .dictionary-error").classList.remove("visible");
+    } catch (e) {
+        let errorString = getSurroundingJSON(e, MouseCustomDict.value);
+        document.querySelector(".mouse .json-error").innerText =
+            e.toString() + ((errorString.length > 0) ? "\nAfter/Around the following string:\n" + errorString : "");
+        document.querySelector(".mouse .dictionary-error").classList.add("visible");
+    }
 }
 
 function clickMouseImages() {
@@ -531,8 +563,8 @@ function clickMouseImages() {
 async function generateMouseImages() {
     let Zip = new JSZip();
     document.getElementsByClassName("outMouseImages")[0].innerHTML = "";
-    for (let key in defaultMouseDict) {
-        let classes = defaultMouseDict[key];
+    for (let key in mouseDict) {
+        let classes = mouseDict[key];
         document.querySelector(".imagemouse").firstElementChild.className = classes;
         let canvas = await html2canvas(document.querySelector(".imagemouse"), {
             backgroundColor: null,
@@ -556,4 +588,20 @@ async function generateMouseImages() {
 updateCustomCSS()
 function updateCustomCSS() {
     customStyleBox.innerHTML = keyCustomStyle.value + "\n"+MouseCustomStyle.value
+}
+
+
+function getSurroundingJSON(error, jsonString) {
+    if (jsonString.length < 100) {
+        return "";
+    }
+    try {
+        const position = parseInt(
+            error.toString().replace(/\n/g, "")
+            .split("JSON at position ")[1]
+        );
+        return jsonString.substr(Math.max(position - 80, 0), 80);
+    } catch (e) {
+
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Automatically generate images for key inputs</title>
@@ -25,33 +25,51 @@
                 <div class="right centercontent">
                     <div class="settings">
                         <section class="keyfiles">
-                            <h2>JSON Object containing file name as key and the letter as value</h2>
-                            <div><textarea type="text" class="dict"></textarea></div>
+                            <label>
+                                <h2>JSON Object containing file name as key and the letter as value</h2>
+                                <textarea class="dict"></textarea>
+                            </label>
+                            <div class="dictionary-error">There was an error trying to parse the JSON: <div class="json-error"></div></div>
                         </section>
                         <section class="html">
-                            <h2>Custom HTML, the content of the element with the class "letter" will be set to the letter.</h2>
-                            <div><textarea type="text" class="dict" style="min-height:105px"></textarea></div>
+                            <label>
+                                <h2>Custom HTML, the content of the element with the class "letter" will be set to the
+                                    letter.</h2>
+                                <textarea class="dict" style="min-height:105px"></textarea>
+                            </label>
                         </section>
                         <section class="style">
-                            <h2>Style for the button.</h2>
-                            <div><textarea type="text" class="dict" style="min-height:250px"></textarea></div>
+                            <label>
+                                <h2>Style for the button.</h2>
+                                <textarea class="dict" style="min-height:250px"></textarea>
+                            </label>
                         </section>
                         <section class="zipfilename">
-                            <h2>Name of the resulting zipfile</h2>
-                            <div><input type="text" class="dict"></input></div>
+                            <label>
+                                <h2>Name of the resulting zipfile</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="scale">
-                            <h2>Scale Property for html2canvas (when the text is blurry you can try higher values to see if you can read it
-                                better)</h2>
-                            <div><input type="text" class="dict"></input></div>
+                            <label>
+                                <h2>Scale Property for html2canvas (when the text is blurry you can try higher values to see if
+                                    you can read it
+                                    better)</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="filenameappend">
-                            <h2>If you want to generate multiple sizes, you can add a string here which is appended to the file name. (So you
-                                don't have to change the JSON everytime)</h2>
-                            <div><input type="text" class="dict"></input></div>
+                            <label>
+                                <h2>If you want to generate multiple sizes, you can add a string here which is appended to the
+                                    file name. (So you
+                                    don't have to change the JSON everytime)</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="sbutton">
-                            <p><div class="centercontent"><div class="button">Generate Images</div></div></p>
+                            <div class="centercontent">
+                                <div class="button">Generate Images</div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -69,39 +87,53 @@
                 <div class="right centercontent">
                     <div class="settings">
                         <section class="keyfiles">
-                            <h2>JSON Object containing file name as key and applied CSS classes as a value</h2>
-                            <div><textarea type="text" class="dict"></textarea></div>
+                            <label>
+                                <h2>JSON Object containing file name as key and applied CSS classes as a value</h2>
+                                <textarea class="dict"></textarea>
+                            </label>
+                            <div class="dictionary-error">There was an error trying to parse the JSON: <div class="json-error"></div></div>
                         </section>
                         <section class="html">
-                            <h2>The HTML of the Mouse, the classes are applied to the top most</h2>
-                            <div><textarea type="text" class="dict" style="min-height:105px"></textarea></div>
+                            <label>
+                                <h2>The HTML of the Mouse, the classes are applied to the top most</h2>
+                                <textarea class="dict" style="min-height:105px"></textarea>
+                            </label>
                         </section>
                         <section class="style">
-                            <h2>Style</h2>
-                            <div><textarea type="text" class="dict" style="min-height:250px"></textarea></div>
+                            <label>
+                                <h2>Style</h2>
+                                <textarea class="dict" style="min-height:250px"></textarea>
+                            </label>
                         </section>
                         <section class="zipfilename">
-                            <h2>Name of the resulting zipfile</h2>
-                            <div><input type="text" class="dict"></input></div>
+
+                            <label>
+                                <h2>Name of the resulting zipfile</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="scale">
-                            <h2>Scale Property for html2canvas (when the text is blurry you can try higher values to see if you can
-                                read it
-                                better)</h2>
-                            <div><input type="text" class="dict"></input></div>
+                            <label>
+                                <h2>Scale Property for html2canvas (when the text is blurry you can try higher values to see if
+                                    you can
+                                    read it
+                                    better)</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="filenameappend">
-                            <h2>If you want to generate multiple sizes, you can add a string here which is appended to the file
-                                name. (So you
-                                don't have to change the JSON everytime)</h2>
-                            <div><input type="text" class="dict"></input></div>
+                            <label>
+                                <h2>If you want to generate multiple sizes, you can add a string here which is appended to the
+                                    file
+                                    name. (So you
+                                    don't have to change the JSON everytime)</h2>
+                                <input type="text" class="dict"/>
+                            </label>
                         </section>
                         <section class="sbutton">
-                            <p>
-                                <div class="centercontent">
-                                    <div class="button">Generate Images</div>
-                                </div>
-                            </p>
+                            <div class="centercontent">
+                                <div class="button">Generate Images</div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -109,11 +141,15 @@
             <section class="divider"></section>
             <section class="github">
                 <p>
-                    <a href="https://github.com/NetroScript/Input-Button-Sprite-Generator">View the github repository</a>
-                    <a class="github-button" href="https://github.com/NetroScript/Input-Button-Sprite-Generator" data-icon="octicon-star"
-                        data-size="large" data-show-count="true" aria-label="Star NetroScript/Input-Button-Sprite-Generator on GitHub">Star</a>
-                    <a class="github-button" href="https://github.com/NetroScript/Input-Button-Sprite-Generator/issues" data-icon="octicon-issue-opened"
-                        data-size="large" data-show-count="true" aria-label="Issue NetroScript/Input-Button-Sprite-Generator on GitHub">Issue</a>
+                    <a href="https://github.com/NetroScript/Input-Button-Sprite-Generator">View the GitHub repository</a>
+                    <a class="github-button" href="https://github.com/NetroScript/Input-Button-Sprite-Generator"
+                       data-icon="octicon-star"
+                       data-size="large" data-show-count="true"
+                       aria-label="Star NetroScript/Input-Button-Sprite-Generator on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/NetroScript/Input-Button-Sprite-Generator/issues"
+                       data-icon="octicon-issue-opened"
+                       data-size="large" data-show-count="true"
+                       aria-label="Issue NetroScript/Input-Button-Sprite-Generator on GitHub">Issue</a>
                 </p>
             </section>
         </main>
