@@ -33,7 +33,7 @@ How it works
 
 You have a web form, where you can fill in a base HTML structure and your own CSS (of course examples are also already given), and the script then iterates through a list of characters and generates an image for every possible character by putting it into your base structure and then taking a "screenshot" using [html2canvas](https://github.com/niklasvh/html2canvas) and so you have less work, [JSZip](https://stuk.github.io/jszip/) is used to put it into a neat zip file, which you just have to downoad.  
 You may ask what about the files names and what if I only want certain characters in my set? Or more than there are provided?  
-Well currently the keyboard scancodes from [Godot])(https://godotengine.org/) are used, so I think every possible input should be in there. But you can customize what you want. For the keyboard you have a JSON object where all keys are the file names which will be generated, and the values will be the HTML which will be put into your base structure. Neat stuff like Material Icons as characters is already included.  
+Well currently the keyboard scancodes from [Godot](https://godotengine.org/) are used, so I think every possible input should be in there. But you can customize what you want. For the keyboard you have a JSON object where all keys are the file names which will be generated, and the values will be the HTML which will be put into your base structure. Neat stuff like Material Icons as characters is already included.  
 
 But the sprites aren't limited to the keyboard!  
 A mouse is already included too, in the same fashion as the keyboard, only change is that the values in the JSON are not the content now, but the classes which will be added to the container.  
